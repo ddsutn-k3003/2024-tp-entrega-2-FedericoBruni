@@ -1,0 +1,8 @@
+ar\edu\utn\dds\k3003\app\Fachada.class
+ar\edu\utn\dds\k3003\model\Heladera.class
+ar\edu\utn\dds\k3003\repositories\HeladeraMapper.class
+ar\edu\utn\dds\k3003\repositories\HeladeraRepository.class
+ar\edu\utn\dds\k3003\model\SomeDomainObject.class
+ar\edu\utn\dds\k3003\model\Temperatura.class
+ar\edu\utn\dds\k3003\exceptions\SomeDomainException.class
+ar\edu\utn\dds\k3003\repositories\TemperaturaMapper.class
