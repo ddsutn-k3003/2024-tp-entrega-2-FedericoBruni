@@ -17,19 +17,10 @@ public class ObtenerHeladeraController {
 
 
     public void obtenerHeladera(Context context) throws NotFoundResponse {
-        /*
-        try {
-            Heladera heladera = this.heladeraRepository.findById(Integer.parseInt(context.pathParam("id")));
-            context.json(heladeraMapper.map(heladera));
-            // context.status(200).result("Heladera obtenida correctamente."); Cuando termine de testear, ponerlo así (descomentar esta línea y sacar la anterior).
-        } catch (NoSuchElementException e) {
-            throw new NotFoundResponse("Heladera no encontrada.");
-        }
-        */
         try {
             HeladeraDTO heladeraDTO = this.fachadaHeladera.buscarXId((Integer.parseInt(context.pathParam("id"))));
-            context.json(heladeraDTO);
-            // context.status(200).result("Heladera obtenida correctamente."); Cuando termine de testear, ponerlo así (descomentar esta línea y sacar la anterior).
+            context.status(200).json(heladeraDTO);
+            //context.status(200).result("Heladera obtenida correctamente.");
         } catch (NoSuchElementException e) {
             throw new NotFoundResponse("Heladera no encontrada.");
         }

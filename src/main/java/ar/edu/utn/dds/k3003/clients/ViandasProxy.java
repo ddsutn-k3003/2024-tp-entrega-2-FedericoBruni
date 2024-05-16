@@ -20,7 +20,7 @@ public class ViandasProxy implements FachadaViandas {
     public ViandasProxy(ObjectMapper objectMapper) {
 
         var env = System.getenv();
-        this.endpoint = env.getOrDefault("URL_VIANDAS", "http://localhost:8080/");
+        this.endpoint = env.getOrDefault("URL_VIANDAS", "http://localhost:8081/");
 
         var retrofit =
                 new Retrofit.Builder()

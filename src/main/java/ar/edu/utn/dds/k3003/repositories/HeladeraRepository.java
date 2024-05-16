@@ -13,7 +13,7 @@ public class HeladeraRepository {
     private Collection<Integer> idsHeladeras;
 
     private static Integer secuencia = 0;
-    private long nextId() {
+    private Integer nextId() {
         secuencia = secuencia + 1;
         return secuencia ; }
 
@@ -24,6 +24,9 @@ public class HeladeraRepository {
 
     public Heladera save(Heladera heladera) {
         if (!this.existeLaHeladera(heladera.getId())){
+            if (heladera.getId() == null){
+                heladera.setId(nextId());
+            }
             this.heladeras.add(heladera);
             this.idsHeladeras.add(heladera.getId());
         }

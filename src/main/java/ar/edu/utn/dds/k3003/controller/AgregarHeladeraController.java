@@ -14,8 +14,8 @@ public class AgregarHeladeraController {
     public void agregar(Context context) throws BadRequestResponse {
         try {
             HeladeraDTO heladeraDTO = context.bodyAsClass(HeladeraDTO.class);
-            this.fachadaHeladeras.agregar(heladeraDTO);
-            context.status(200).result("Heladera agregada correctamente.");
+            //this.fachadaHeladeras.agregar(heladeraDTO);
+            context.status(200).result("Heladera agregada correctamente.").json(this.fachadaHeladeras.agregar(heladeraDTO));
         } catch (Exception e) {
             throw new BadRequestResponse("Error de solicitud.");
         }
