@@ -33,13 +33,13 @@ class FachadaTest {
         COLABORADOR_ID = 10L;
         TEMPERATURA = 25;
         this.fachadaHeladera.setViandasProxy(fachadaViandas);
-        this.fachadaHeladera.agregar(new HeladeraDTO(HELADERA_ID, "Heladera 32"));
+        this.fachadaHeladera.agregar(new HeladeraDTO(HELADERA_ID, "Heladera 32", 0));
 
     }
 
     @Test
     void agregar() {
-        HeladeraDTO heladeraDTO = new HeladeraDTO(HELADERA_ID, "Heladera33");
+        HeladeraDTO heladeraDTO = new HeladeraDTO(HELADERA_ID, "Heladera33", 0);
         HeladeraDTO heladeraDTOResultado = this.fachadaHeladera.agregar(heladeraDTO);
         Assertions.assertEquals(heladeraDTO.getId(), heladeraDTOResultado.getId());
 
